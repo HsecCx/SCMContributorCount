@@ -4,3 +4,7 @@ gitlab_projects.csv
 output.txt
 *.log
 projects_contributors.json
+oauth_helper.py
+projects_active_contributors.json
+*.vscode
+cx_unique_contributors_output.txt
