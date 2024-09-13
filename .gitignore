@@ -2,3 +2,5 @@ config.ini
 holder.txt
 gitlab_projects.csv
 output.txt
+*.log
+projects_contributors.json
