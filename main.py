@@ -291,14 +291,15 @@ def main():
             if recent_committers:
                 logging.info(f"Found active contributors in the last 90 days for project: {project_name}")
                 project_contributors = {}  # Dictionary to store users for this project
-
+                unique_proj_contributors = 0
                 for email in recent_committers:
                     project_contributors[email] = {
                         "role": "Active Contributor (last 90 days)"
                     }
                     # Track unique users by email
                     unique_users.add(email)
-
+                    unique_proj_contributors += 1
+                    project_contributors["unique_contributors"] = unique_proj_contributors
                 # Add the project and its contributors to the project_data dictionary
                 project_data[project_name] = project_contributors
             else:
